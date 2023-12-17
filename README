@@ -1,0 +1,39 @@
+Commands supported in stations/routers/bridges
+
+   stations:
+
+	   send <destination> <message> // send message to a destination host
+	   show arp 		// show the ARP cache table information
+	   show pq 		// show the pending_queue
+	   show	host 		// show the IP/name mapping table
+	   show	iface 		// show the interface information
+	   show	rtable 		// show the contents of routing table
+	   quit // close the station
+
+   routers:
+
+	   show	arp 		// show the ARP cache table information
+	   show	pq 		// show the pending_queue
+	   show	host 		// show the IP/name mapping table
+	   show	iface 		// show the interface information
+	   show	rtable 		// show the contents of routing table
+	   quit // close the router
+
+
+   bridges:
+
+	   show sl 		// show the contents of self-learning table
+	   quit // close the bridge
+
+Network Simulation:
+
+	B  -----R3------  C              D
+	\ |             | |              |
+	cs1-----R1------cs2------R2-----cs3
+	|               |                |
+	-------A---------                E
+
+    cs1, cs2, and cs3 are bridges.
+    R1,R2 and R3 are routers.
+    A to E are hosts/stations.
+    Note that A is multi-homed, but it is not a router.
